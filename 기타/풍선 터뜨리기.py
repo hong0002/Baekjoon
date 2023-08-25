@@ -16,7 +16,7 @@ input = sys.stdin.readline
 
 n = int(input())
 orders = list(map(int, input().split()))
-balloons = deque((i+1, v) for i, v in enumerate(orders))
+balloons = deque((i+1, v) for i, v in enumerate(orders)) # 튜플 형식으로 deque에 저장
 
 while balloons:
     count = balloons[0][1]
