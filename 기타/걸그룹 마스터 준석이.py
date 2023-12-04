@@ -10,9 +10,16 @@
 #
 # 첫 번째 줄부터 차례대로 퀴즈에 대한 답을 출력한다. 퀴즈의 종류가 0일 경우 해당 팀에 속한 멤버의 이름을 사전순으로 한 줄에 한 명씩 출력한다. 퀴즈의 종류가 1일 경우 해당 멤버가 속한 팀의 이름을 출력한다.
 
+class GirlGroup:
+    def __init__(self):
+        self.group_list = dict()
+
+    def add_group(self, name, data):
+        self.group_list[name] = data
+
 n, m = map(int, input().split())
 
-group_list = dict()
+group_list = GirlGroup()
 # 걸그룹 입력
 for _ in range(n):
     group_name = input()
@@ -22,7 +29,7 @@ for _ in range(n):
         name = input()
         names.append(name)
     names = sorted(names)
-    group_list[group_name] = names
+    group_list.add_group(group_name, names)
 
 # 퀴즈
 for _ in range(m):
@@ -31,12 +38,12 @@ for _ in range(m):
     flag = False
     # 맴버 이름 출력
     if op == 0:
-        for i in group_list[quiz]:
+        for i in group_list.group_list[quiz]:
             print(i)
     # 그룹명 출력
     elif op == 1:
-        for i in group_list:
-            for j in group_list[i]:
+        for i in group_list.group_list:
+            for j in group_list.group_list[i]:
                 if j == quiz:
                     flag = True
                     break
