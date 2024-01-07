@@ -14,3 +14,4 @@ prices = list(map(int, input().split()))
 # 최소 비용 계산 및 출력
 result = min_cost_for_socks(N, X, prices)
 print(result)
+
