@@ -12,3 +12,4 @@ emoji = input().strip()
 # 입력 난이도 계산하고 출력
 difficulty = calculate_input_difficulty(emoji)
 print(difficulty)
+
