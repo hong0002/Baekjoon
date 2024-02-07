@@ -12,3 +12,4 @@ result_string = int(str(A) + str(B)) - C
 # 결과 출력
 print(result_numeric)
 print(result_string)
+
