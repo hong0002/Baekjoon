@@ -11,3 +11,4 @@ w, h = map(int, input().split())
 
 # 결과 출력
 print(extra_cutting_effort(w, h))
+
