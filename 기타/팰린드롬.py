@@ -1,0 +1,5 @@
+word = input()
+word_list = list(word)
+word_list.reverse()
+comp = ''.join(word_list)
+print('true') if word == comp else print('false')
