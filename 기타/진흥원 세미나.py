@@ -1,0 +1,10 @@
+n = int(input())
+for _ in range(n):
+    s = input()
+    if s == "Algorithm": print(204)
+    if s == "DataAnalysis": print(207)
+    if s == "ArtificialIntelligence": print(302)
+    if s == "CyberSecurity": print("B101")
+    if s == "Network": print(303)
+    if s == "Startup": print(501)
+    if s == "TestStrategy": print(105)
