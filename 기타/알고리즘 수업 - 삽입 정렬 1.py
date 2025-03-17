@@ -1,4 +1,4 @@
-def insertion_sort(nums, k, result):
+def insertion_sort(nums, k):
     count = 0
     for i in range(1, len(nums)):
         loc = i - 1
@@ -6,16 +6,17 @@ def insertion_sort(nums, k, result):
         while loc >= 0 and newItem < nums[loc]:
             count += 1
             nums[loc+1] = nums[loc]
-            if count == k: result = nums[loc]
+            if count == k:
+                return nums[loc]
             loc -= 1
         
         if loc+1 != i:
             count += 1
             nums[loc+1] = newItem
-            if count == k: result = nums[loc]
+            if count == k:
+                return nums[loc]
     
-    return result
+    return -1
 
 a, k = map(int, input().split(" "))
-result = -1
-print(insertion_sort(list(map(int, input().split(" "))), k, result))
+print(insertion_sort(list(map(int, input().split(" "))), k))
