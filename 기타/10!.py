@@ -11,4 +11,3 @@ weeks = factorial // (7 * 24 * 60 * 60)
 
 # 결과 출력
 print(weeks)
-
