@@ -12,10 +12,7 @@ def digit_sum(s: str) -> int:
 n = int(input().strip())
 serials = [input().strip() for _ in range(n)]
 
-# 정렬 기준:
-# 1) 길이
-# 2) 숫자 합
-# 3) 문자열 사전순
+# 정렬 기준: (길이, 숫자합, 사전순)
 serials.sort(key=lambda s: (len(s), digit_sum(s), s))
 
 print("\n".join(serials))
